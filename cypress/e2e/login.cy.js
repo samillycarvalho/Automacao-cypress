@@ -31,3 +31,11 @@ describe('Login', () => {
         cy.get(element.bnt_login).click();
         cy.MsgLoginInvalido()
         });
+    it('Login com senha no email e email na senha', () => {
+    cy.get(element.input_password).type(Cypress.env('EMAIL_INVALIDO'));
+    cy.get(element.input_email).type(Cypress.env('PASSOWORD'));
+    cy.get(element.bnt_login).click();
+    cy.MsgLoginInvalido()
+    });    
+
+    

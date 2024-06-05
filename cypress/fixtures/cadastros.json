@@ -1,0 +1,11 @@
+{
+    "contem_cadastro":"#Cadastros",
+    "butn_novocadastros":"Novo Cadastro",
+    "input_nomesobrenome":"fullName",
+    "input_email":"mail",
+    "Input_perfildeAcesso":"accessProfile",
+    "Input_CPF":"cpf",
+    "Input_senhacadastro":"password",
+    "Input_confirmarSenha":"confirmPassword"
+
+}
