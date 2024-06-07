@@ -15,9 +15,6 @@ beforeEach(() => {
   
   });
   
-    
-
-
 
   it('new_user', () => {
     const fullName = faker.person.fullName(); // Gera um nome completo dinâmico

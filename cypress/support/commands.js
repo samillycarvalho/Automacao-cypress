@@ -37,13 +37,17 @@ Cypress.Commands.add('MsgLoginInvalido',() =>{
       .should('be.visible')
       .type(confirmPassword); // Use a variável confirmPassword
     cy.contains('SALVAR NOVO').click({force: true});
-
-    
-
 });
 
-    
+Cypress.Commands.add('New_Board', (BoardName) => {
+  const name = BoardName || faker.company.name();
+  cy.get('#boardName')
+  .should('be.visible')
+  .type(BoardName);
+  cy.contains('SALVAR NOVO').click({force: true});
+});    
 
-    
+
+
 
   
