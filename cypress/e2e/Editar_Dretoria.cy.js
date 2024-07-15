@@ -9,10 +9,10 @@ beforeEach(() => {
     cy.get(element.bnt_login).click();
     cy.contains('Cadastros').click();
     cy.contains('Diretorias').click();
-    cy.contains('Novo Cadastro').click();
+    cy.contains('Editar').click()
   });
-  
-it('New_Board', () =>{
-    const boardName = faker.company.name();
-  cy.New_Board(boardName);
-})  
+
+it('Editar_Cadastro', () =>{
+    const EditBoard = faker.string.fromCharacters('abc', 10); // 'cbbbacbacb'();
+    cy.Editar_Cadastro(EditBoard);
+  })

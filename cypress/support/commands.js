@@ -17,7 +17,7 @@ Cypress.Commands.add('MsgLoginInvalido',() =>{
     cy.get('[class="MuiAlert-message css-1xsto0d"]').should('have.text','E');
    
    });
-   Cypress.Commands.add('new_user', (fullName, email, accessProfile, password, confirmPassword, cpf) => {
+Cypress.Commands.add('new_user', (fullName, email, accessProfile, password, confirmPassword, cpf) => {
     cy.get('#fullName')
       .should('be.visible')
       .type(fullName); // Use a variável fullName
@@ -48,6 +48,12 @@ Cypress.Commands.add('New_Board', (BoardName) => {
 });    
 
 
-
+Cypress.Commands.add('Editar_Cadastro', (EditBoard) => {
+  const name = EditBoard || faker.company.name();
+cy.get('#boardName')
+.should('be.visible')
+.type(EditBoard)
+cy.contains('SALVAR ALTERAÇOES').click({force: true});
+});
 
   
