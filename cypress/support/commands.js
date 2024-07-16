@@ -56,4 +56,11 @@ cy.get('#boardName')
 cy.contains('SALVAR ALTERAÇOES').click({force: true});
 });
 
-  
+Cypress.Commands.add('MsgeditarInvalido',(EditaDIretoriaIn) =>{
+ const name = EditaDIretoriaIn || faker.company.name();
+ cy.get('#boardName')
+ .should('be.visible')
+.type(EditaDIretoriaIn)
+  cy.contains('SALVAR ALTERAÇOES').click({force: true});
+cy.get('[class="css-bbipig"]').should('have.text',"O campo diretoria pode ter no máximo 50 caracteres");
+});
